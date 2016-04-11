@@ -47,9 +47,13 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+<<<<<<< HEAD
                     <li><a href="{{ url('/home') }}">Accueil</a></li>
                     <li><a href="{{ url('/classement') }}">Classement</a></li>
 
+=======
+                    <li><a href="{{ url('/home') }}">Infos</a></li>
+>>>>>>> d1df68e3a8fa48aaa8897e1b2368e1bd33ce6d19
                 </ul>
 
                 <!-- Right Side Of Navbar -->
