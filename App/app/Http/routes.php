@@ -15,18 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/classement', function () {
-    return view('classement');
-});
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::auth();
-
 Route::get('/home', 'HomeController@index');
 
+Route::get('/classement', 'ClassementController@index');
 
 
 
