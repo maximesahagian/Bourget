@@ -8,7 +8,7 @@
                 <div class="panel-heading">Bonjour</div>
 
                 <div class="panel-body">
-                    Your Application's Landiinggggg Page !
+                    Veuillez vous connecter
                 </div>
             </div>
         </div>
