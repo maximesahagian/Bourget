@@ -8,7 +8,7 @@
                 <div class="panel-heading">Bonjour</div>
 
                 <div class="panel-body">
-                    Veuillez vous connecter
+                    Voilà la page Home
                 </div>
             </div>
         </div>
