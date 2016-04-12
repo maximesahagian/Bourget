@@ -9,6 +9,10 @@
 
                 <div class="panel-body">
                     Voilà la page Home
+                    {!! Form::open(array('action' => 'HomeController@insert', 'method' => 'post')) !!}
+                    {!! Form::text('email') !!}
+                    {!! Form::submit() !!}
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

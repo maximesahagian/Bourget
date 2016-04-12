@@ -26,5 +26,3 @@ Route::get('/classement', 'ClassementController@index');
 Route::get('/newsletter', function () {
     return view('homepage');
 });
-
-Route::post('/newsletter/add', 'NewsletterController@insert');

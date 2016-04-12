@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Symfony\Component\DomCrawler\Form;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -25,6 +27,22 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function insert()
+    {
+        $email = Input::get('email');
+        if (strpos($email, '@') !== false && strpos($email, '.') !== false) {
+            DB::table('newsletter')->insert(
+                array("email" => $email)
+            );
+        } else {
+            echo "faux";
+        }
+
+        return redirect("/");
+
+
     }
 
 

@@ -3,13 +3,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
-class NewsController extends Controller
+class NewsletterController extends Controller
 {
 
-    public function __construct($email)
+    public function __construct()
     {
 
+    }
+
+    public function insert()
+    {
+        $email = Input::get('email');
         if (strpos($email, '@') !== false && strpos($email, '.') !== false) {
             DB::table('newsletter')->insert(
                 array("email" => $email)
@@ -17,12 +24,9 @@ class NewsController extends Controller
         } else {
             echo "faux";
         }
-    }
 
-    public function insert()
-    {
+        return redirect("/");
 
-        echo Input::post('emmail');
 
 }
 
