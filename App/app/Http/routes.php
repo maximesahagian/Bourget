@@ -27,6 +27,4 @@ Route::get('/newsletter', function () {
     return view('homepage');
 });
 
-Route::get('/newsletteradd', function () {
-    return view('newsletter');
-});
+Route::post('/newsletter/add', 'NewsletterController@insert');

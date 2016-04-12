@@ -1,4 +1,4 @@
 <?php
-$email = \Illuminate\Support\Facades\Input::get('email');
+$email = $name = $request->email;
 
-$emailAdd = new \App\Http\Controllers\NewsletterController($email);
+$emailAdd = new App\Http\Controllers\NewsletterController($email);
