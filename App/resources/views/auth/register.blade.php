@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Inscription</div>
+                <div class="panel-heading">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Prénom</label>
+                            <label class="col-md-4 control-label">Nom</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="name" value="{{ old('name') }}">
@@ -23,9 +23,22 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('pseudo') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Pseudo</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="pseudo" value="{{ old('pseudo') }}">
+
+                                @if ($errors->has('pseudo'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('pseudo') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Adresse mail</label>
+                            <label class="col-md-4 control-label">Adresse E-mail</label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -39,7 +52,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Mot de pass</label>
+                            <label class="col-md-4 control-label">Mot de passe</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password">
@@ -53,7 +66,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Confirmer le mot de pass</label>
+                            <label class="col-md-4 control-label">Confirmation du mot de passe</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password_confirmation">
@@ -69,7 +82,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Inscription
+                                    <i class="fa fa-btn fa-user"></i>S'inscrire
                                 </button>
                             </div>
                         </div>
