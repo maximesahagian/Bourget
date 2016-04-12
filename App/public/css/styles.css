@@ -1,0 +1,11 @@
+.done{
+    background-color: green !important;
+}
+
+tr td:last-child{
+    text-align: center;
+}
+
+.container-fluid{
+    padding:0;
+}
