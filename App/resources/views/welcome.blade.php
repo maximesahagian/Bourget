@@ -108,6 +108,7 @@
     </nav>
     <a class="logo" href="#premierePage"><img src="{{asset("img/logo.png")}}" alt=""></a>
 </footer>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
 <script>
     $('.hoverBleu').mouseenter(function(){
@@ -160,14 +161,10 @@
         if (Auth::guest()){
             ?>
 $('.envol').click(function() {
-
-
-    
-
-    });
+    $('#modal').modal('show');
+});
         <?php
         }
-
     else{
         ?>
         $('.envol').click(function() {

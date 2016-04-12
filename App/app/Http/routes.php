@@ -29,17 +29,3 @@ Route::auth();
 Route::get('/jeu/', 'JeuController@index');
 
 Route::get('/home', 'HomeController@index');
-
-/* Ajax for login in Home Page*/
-
-
-Route::get( '/settings/new', array(
-    'as' => 'settings.new',
-    'uses' => 'SettingsController@add'
-) );
-
-
-Route::post( '/settings', array(
-    'as' => 'settings.create',
-    'uses' => 'SettingsController@create'
-) );
