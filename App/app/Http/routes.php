@@ -23,5 +23,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/classement', 'ClassementController@index');
 
+Route::get('/newsletter', function () {
+    return view('homepage');
+});
 
-
+Route::get('/newsletteradd', function () {
+    return view('newsletter');
+});
