@@ -1,26 +1,30 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Max
- * Date: 12/04/2016
- * Time: 1:43 PM
- */
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
 
-class NewsController
+use App\Http\Requests;
+use Illuminate\Http\Request;
+
+class NewsController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
     }
 
-    public function insert(){
-        DB::table('newsletter')->insert(
-            ['email' => "Salut"]
-        );
-
-        return redirect('/');
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('try');
     }
+
 
 }

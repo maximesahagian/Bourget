@@ -12,9 +12,13 @@
 */
 
 
+Route::post('/newsletterok', 'NewsletterController@insert');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/try', 'NewsletterController@index');
 
 Route::auth();
 
@@ -23,9 +27,3 @@ Route::get('/home', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 
 Route::get('/classement', 'ClassementController@index');
-
-Route::post('/try', 'NewsController@insert');
-
-Route::get('/try', function(){
-    return view('try');
-});

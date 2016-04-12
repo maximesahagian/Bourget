@@ -1,5 +1,4 @@
 <?php
-use Collective\Html\FormFacade;
 ?>
 
 @extends('layouts.app')
@@ -12,7 +11,20 @@ use Collective\Html\FormFacade;
                 <div class="panel-heading">Bonjour</div>
 
                 <div class="panel-body">
-                    Voilà la page Home
+
+                    <?
+                    echo "<span class='label label-success'>".Session::get('message')."</span>";
+                    ?>
+
+                    <h2>Bienvenue sur la page Home</h2>
+
+
+                    {!! Form::open(array('action' => 'NewsletterController@insert')) !!}
+                    {!! Form::email('email') !!}
+                    {!! Form::submit() !!}
+                    {!! Form::close() !!}
+
+
                 </div>
             </div>
         </div>
