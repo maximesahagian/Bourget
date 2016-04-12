@@ -65,7 +65,6 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Déconnexion</a></li>
-                                <li><i class="fa fa-btn fa-sign-out"></i>{{ Auth::user()->email }}</li>
                             </ul>
                         </li>
                     @endif

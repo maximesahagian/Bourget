@@ -23,7 +23,7 @@ class ClassementController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function read(){
+    public function readScore(){
         $users = DB::table('classement')->orderBy('score','desc')->get();
         $i = 1;
         foreach ($users as $user) {

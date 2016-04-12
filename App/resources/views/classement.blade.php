@@ -10,7 +10,7 @@
                     <div class="panel-body">
                         <?php
                             $users = new \App\Http\Controllers\ClassementController();
-                            $users->read();
+                            $users->readScore();
 
 
                         ?>
