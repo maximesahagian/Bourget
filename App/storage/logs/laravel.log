@@ -6162,3 +6162,24 @@ Stack trace:
 #54 /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #55 /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #56 {main}  
+[2016-04-12 15:00:12] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  
+[2016-04-12 15:00:22] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  
+[2016-04-12 15:00:24] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  
+[2016-04-12 15:00:32] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  
+[2016-04-12 15:00:40] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  
+[2016-04-12 15:00:42] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  
+[2016-04-12 15:00:50] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Namespace declaration statement has to be the very first statement in the script in /Users/Bourgoin/Documents/MyProject/Semaine_Intensive_Web/Bourget/App/app/User.php:4
+Stack trace:
+#0 {main}  

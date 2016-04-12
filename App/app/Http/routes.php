@@ -83,3 +83,7 @@ Route::post('/newsletters', function(Request $request){
     return redirect('/');
 });
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
