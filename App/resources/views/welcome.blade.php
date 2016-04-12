@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bourget d'en haut | Gagnez de la hauteur pour le salon du Bourget</title>
-    <meta name="description" content="A l’occasion du 52ème salon international de l’aeronautique et de l’espace participez à l’opération Bourget d’en haut en partenariat avec la Patrouille de France.
-    Vivez l’expérience des meileurs pilotes de l’Armée de l’air et tentez de gagner un vol en alphajet, des places pour le 52ème Salon du Bourget ainsi que des centaines d’autres cadeaux à gagner.">
-    <link rel="stylesheet" href="{{asset("css/reset.css")}}">
-    <link rel="stylesheet" href="{{asset("css/styles.css")}}">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <section id="premierePage">
     <div class="transparence"></div>
     <div class="video">
@@ -176,6 +168,5 @@ $('.envol').click(function() {
 
 </script>
 
-</body>
-</html>
+@endsection
 
