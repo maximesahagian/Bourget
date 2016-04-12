@@ -8,13 +8,7 @@
                     <div class="panel-heading">Classement</div>
 
                     <div class="panel-body">
-                        <?php
-                            $users = new \App\Http\Controllers\ClassementController();
-                            $users->readScore();
-
-
-                        ?>
-
+                            {{\App::call('App\Http\Controllers\ClassementController@readScore')}}
                     </div>
                 </div>
             </div>
