@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,6 +24,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/classement', 'ClassementController@index');
 
-Route::get('/newsletter', function () {
-    return view('homepage');
+Route::post('/try', 'NewsController@insert');
+
+Route::get('/try', function(){
+    return view('try');
 });
