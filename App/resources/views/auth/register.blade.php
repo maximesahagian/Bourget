@@ -27,7 +27,7 @@
                             <label class="col-md-4 control-label">Pseudo</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('pseudo') }}">
+                                <input type="text" class="form-control" name="pseudo" value="{{ old('pseudo') }}">
 
                                 @if ($errors->has('pseudo'))
                                     <span class="help-block">
