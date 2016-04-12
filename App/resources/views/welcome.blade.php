@@ -12,7 +12,7 @@
 <section id="premierePage">
     <div class="transparence"></div>
     <div class="video">
-        <video src="video/patrouilleFrance.mp4" autoplay></video>
+        <video src="{{asset("video/patrouilleFrance.mp4")}}" autoplay></video>
     </div>
 
     <img class="fondBlanc" src="{{asset("img/fondBlanc.png")}}" alt="">
