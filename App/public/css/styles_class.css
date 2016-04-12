@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700);
+
+body{
+    color: white;
+    overflow: hidden;
+    font-family: "Lato";
+}
+
+video{
+    width: 100%;
+    z-index: -5;
+    margin-top: -125px;
+    z-index: 0;
+}
+
+.logo{
+    position: absolute;
+    top: 32px;
+    margin-left: 2%;
+    z-index: 1;
+}
+
+.logo img{
+    width: 60%;
+    height: auto;
+}
+
+.left{
+    width: 40%;
+    float: left;
+    margin-left: 12%;
+}
+.lots{margin-top: 60px;
+    font-size: 20px;}
+.place{
+    margin-top: 50px;
+    font-size: 25px;
+}
+.right{
+    width: 30%;
+    margin-right: 100px;
+    float: right;
+    font-size: 22px;
+}
+.right span{
+    font-weight: 700;
+}
+.right p{
+    margin-bottom: 15px;
+}
+
+.classement{
+    position: absolute;
+    top : 30%;
+    width: 100%;
+}
+
+.barre{
+    background-color: #0e90d2;
+    width: 500px;
+    height: 25px;
+}
+
+
+nav ul li{
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.tableau{
+    height: 400px;
+    width : 500px;
+    overflow: auto;
+}
+
+.menu li{
+    margin-left: 35px;
+}
+
+.infos li:first-child{
+    margin-left: 35px;
+}
+
+.infos li:nth-child(2){
+    margin-left: 85px;
+}
+
+.infos li:nth-child(3){
+    margin-left: 40px;
+}
+
+.infos li:nth-child(4){
+    margin-left: 60px;
+}
+h1{
+    font-size:  22px;
+    margin-bottom: 20px;
+}
+
+.separate{
+   
+    margin-left: 30px;
+    font-size: 25px;
+    
+}
