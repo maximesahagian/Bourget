@@ -78,7 +78,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        <a href="{{url('/login')}}" class="btn btn-link">Déjà inscrit ?</a>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

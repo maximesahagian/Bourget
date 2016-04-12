@@ -8,7 +8,7 @@
     </div>
 
     <img class="fondBlanc" src="{{asset("img/fondBlanc.png")}}" alt="">
-    <a class="envol" href="">Envolez-vous</a>
+    <a class="envol" href="{{url('/register')}}">Envolez-vous</a>
     <a class="logo" href=""><img src="{{asset("img/logo.png")}}" alt=""></a>
     <h1>Gagnez de la hauteur pour le salon du bourget</h1>
     <div class="texteHeader">
