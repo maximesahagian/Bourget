@@ -158,10 +158,10 @@
 
                                 <!-- Task Name -->
                         <div class="form-group">
-                            <label for="email" class="col-sm-3 control-label">Emaill</label>
+                            <label for="email" class="col-sm-3 control-label">Email</label>
 
                             <div class="col-sm-6">
-                                <input type="email" name="mail" id="email" class="form-control">cd
+                                <input type="email" name="mail" id="email" class="form-control">
                             </div>
                         </div>
 
