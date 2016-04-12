@@ -153,6 +153,30 @@
         }, 'slow');
         return false;
     });
+
+
+<?php
+        use Illuminate\Support\Facades\Auth;
+        if (Auth::guest()){
+            ?>
+$('.envol').click(function() {
+
+
+    
+
+    });
+        <?php
+        }
+
+    else{
+        ?>
+        $('.envol').click(function() {
+            $(".envol").attr("href", "simulator")
+        });
+
+        <?php
+    }?>
+
 </script>
 
 </body>
