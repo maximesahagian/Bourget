@@ -96,7 +96,7 @@
     <h2>S'inscrire à la newsletter</h2>
     {!! Form::open(array('action' => 'NewsletterController@insert')) !!}
     <input type="email" style="width: 200px;margin-left: 15%;" name="email" placeholder="Saisissez votre adresse mail">
-    <input type="image" style="width: 50px" name="submit" src="{{asset("img/play.png")}}" border="0" alt="Submit" />
+    <input type="image" style="width: 26px; vertical-align: top; position: relative; margin-top: 27px;" name="submit" src="{{asset("img/play.png")}}" border="0" alt="Submit" />
     <span class="barre" style="display: block;"></span>
     {!! Form::close() !!}
     <nav>

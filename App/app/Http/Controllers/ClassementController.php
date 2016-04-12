@@ -27,9 +27,16 @@ class ClassementController extends Controller
         $users = DB::table('classement')->orderBy('score','desc')->get();
         $i = 1;
         foreach ($users as $user) {
-            echo "<div style='margin-right: 20px; display: inline-block; width: 100px;'>".$i."</div>";
-            echo "<div style='margin-right: 20px; display: inline-block; width: 150px;'>".$user->username."</div>";
-            echo "<div style='margin-right: 20px; display: inline-block; width: 100px;'>".$user->score."</div> <br>";
+            if($i>1){
+                echo "<div style='margin-right: 20px; display: inline-block; width: 100px; margin-top: 20px;'>".$i."</div>";
+                echo "<div style='margin-right: 20px; display: inline-block; width: 150px;'>".$user->username."</div>";
+                echo "<div style='margin-right: 20px; display: inline-block; width: 100px;'>".$user->score."</div> <br>";
+            }
+            else{
+                echo "<div style='margin-right: 20px; display: inline-block; width: 100px;'>".$i."</div>";
+                echo "<div style='margin-right: 20px; display: inline-block; width: 150px;'>".$user->username."</div>";
+                echo "<div style='margin-right: 20px; display: inline-block; width: 100px;'>".$user->score."</div> <br>";
+            }
             $i++;
         }
     }
