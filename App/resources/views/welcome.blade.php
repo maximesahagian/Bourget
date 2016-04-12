@@ -94,9 +94,11 @@
 </section>
 <footer>
     <h2>S'inscrire à la newsletter</h2>
-    <input type="text" placeholder="Saisissez votre adresse mail">
-    <span class="barre"></span>
-    <img src="" alt="">
+    {!! Form::open(array('action' => 'NewsletterController@insert')) !!}
+    <input type="email" style="width: 200px;margin-left: 15%;" name="email" placeholder="Saisissez votre adresse mail">
+    <input type="submit" style="width: 50px;">
+    <span class="barre" style="display: block;"></span>
+    {!! Form::close() !!}
     <nav>
         <ul>
             <li><a href="">TOUS DROITS RÉSERVÉS ©2016 BOURGET D’EN HAUT</a></li>
@@ -158,8 +160,4 @@
 
 </body>
 </html>
-                    {!! Form::open(array('action' => 'NewsletterController@insert')) !!}
-                    {!! Form::email('email') !!}
-                    {!! Form::submit() !!}
-                    {!! Form::close() !!}
 

@@ -322,9 +322,7 @@ footer h2 {
 
 input {
     margin-top: 25px;
-    width: 200px;
     height: 25px;
-    margin-left: 15%;
     background-color: transparent;
     border: none;
     color: white;
@@ -345,7 +343,7 @@ input:focus
 {
     position:relative;
     display:block;
-    width: 205px;
+    width: 190px;
     margin-left: 15%;
     margin-top: -1px;
 }
