@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
     <section id="premierePage">
         <div class="transparence"></div>
         <div class="homeVideo">
@@ -201,7 +203,7 @@ $('.envol').click(function() {
     else{
 ?>
         $('.envol').click(function() {
-            $(".envol").attr("href", "simulator")
+            $(".envol").attr("href", "jeu")
         });
 <?php
     }?>
