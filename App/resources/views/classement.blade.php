@@ -39,12 +39,6 @@
             Pour le premier un vol parmis les meilleurs en AlphaJet.
             <br/>
             Pour les 50 premiers une place pour le Salon du Bourget 2017 qui se déroule du 19 ou 25 Juin 2017!</p>
-
-
-
-
-
-
     </div>
 </section>
 @endsection
