@@ -14,10 +14,11 @@
         <div class="texteHeader">
             A l’occasion du <span>52ème salon international de l’aeronautique et de l’espace</span> participez à l’opération Bourget d’en haut en partenariat avec la Patrouille de France.
             Vivez l’expérience des meileurs pilotes de l’Armée de l’air et tentez de gagner un vol en alphajet, des places pour le 52ème Salon du Bourget ainsi que des centaines d’autres cadeaux à gagner.
-            <a class="jouer" href="">Acceder au jeu</a>
+            <!--Modif-->
+            <a class="jouer jouer--isi jouer__icon" href="{{ action("JeuController@index") }}">Acceder au jeu</a>
+            <!--FinModif-->
         </div>
         <a href="#salon">
-            <img class="scroll" src="{{asset('img/scroll.png')}}" alt="">
             <div class="scrollez">Scrollez pour en apprendre plus</div>
         </a>
 
@@ -76,7 +77,9 @@
 
             Jean Vilain, ailier du commandant Delachenal, leader de la patrouille 1953, nous confie que « Le vol en patrouille réclamait une synchronisation parfaite jusqu’à incarner l’élégance par un vol harmonieux et majestueux ».
         </div>
-        <a href=""><button style="width: 300px;">Visitez le site de la paf
+        <!-- Modif   -->
+        <a href=""><button  class="button button--isi button__icon" style="width: 300px;">Visitez le site de la paf
+                <!-- FinModif  -->
                 <object class="chaine" type="image/svg+xml" data="{{asset('img/chaine.svg')}}" width="20" height="auto">
                 </object>
             </button></a>
@@ -98,9 +101,92 @@
         <a class="logo" href="#premierePage"><img src="{{asset('img/logo.png')}}" alt=""></a>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+        $('.hoverBleu').mouseenter(function(){
+            $('.hoverBleu').css({
+                "opacity" : "1"
+            });
+            $('.premierLi').css({
+                "color":"white"
+            });
+        });
+        $('.hoverBleu').mouseleave(function(){
+            $('.hoverBleu').css({
+                "opacity" : "0"
+            });
+            $('.premierLi').css({
+                "color":"#1b87de"
+            });
+        });
 
 
+        $('.fondPafBleu').mouseenter(function(){
+            $('.fondPafBleu').css({
+                "opacity" : "1"
+            });
+            $('.secondLi').css({
+                "color":"white"
+            });
+        });
+        $('.fondPafBleu').mouseleave(function(){
+            $('.fondPafBleu').css({
+                "opacity" : "0"
+            });
+            $('.secondLi').css({
+                "color":"#1b87de"
+            });
+        });
+    </script>
 
+    <script>
+        $('a[href^="#"]').click(function(){
+            var the_id = $(this).attr("href");
+
+            $('html, body').animate({
+                scrollTop:$(the_id).offset().top
+            }, 'slow');
+            return false;
+        });
+    </script>
+    <!--Modif-->
+    <script>
+        $('.premierLi').mouseenter(function(){
+            $('.hoverBleu').css({
+                "opacity" : "1"
+            });
+            $('.premierLi').css({
+                "color":"white"
+            });
+        });
+        $('.premierLi').mouseleave(function(){
+            $('.hoverBleu').css({
+                "opacity" : "0"
+            });
+            $('.premierLi').css({
+                "color":"#1b87de"
+            });
+        });
+
+        $('.secondLi').mouseenter(function(){
+            $('.fondPafBleu').css({
+                "opacity" : "1"
+            });
+            $('.secondLi').css({
+                "color":"white"
+            });
+        });
+        $('.secondLi').mouseleave(function(){
+            $('.fondPafBleu').css({
+                "opacity" : "0"
+            });
+            $('.secondLi').css({
+                "color":"#1b87de"
+            });
+        });
+
+    </script>
 
 <script>
 <?php
@@ -119,6 +205,40 @@ $('.envol').click(function() {
         });
 <?php
     }?>
+
+    $('.premierLi').mouseenter(function(){
+    $('.hoverBleu').css({
+        "opacity" : "1"
+    });
+    $('.premierLi').css({
+        "color":"white"
+    });
+});
+$('.premierLi').mouseleave(function(){
+    $('.hoverBleu').css({
+        "opacity" : "0"
+    });
+    $('.premierLi').css({
+        "color":"#1b87de"
+    });
+});
+
+$('.secondLi').mouseenter(function(){
+    $('.fondPafBleu').css({
+        "opacity" : "1"
+    });
+    $('.secondLi').css({
+        "color":"white"
+    });
+});
+$('.secondLi').mouseleave(function(){
+    $('.fondPafBleu').css({
+        "opacity" : "0"
+    });
+    $('.secondLi').css({
+        "color":"#1b87de"
+    });
+});
 
 </script>
 

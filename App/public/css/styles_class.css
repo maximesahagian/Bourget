@@ -1,0 +1,729 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    color: #fff;
+    overflow-y: hidden;
+    background-color:  black;
+}
+
+/** HOME PAGE **/
+
+/** PREMIERE PAGE **/
+
+.transparence{
+    background-color: rgba(47, 47, 47, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+.classHomeVideo{
+    width: 100%;
+    z-index: -5;
+    margin-top: -125px;
+    max-height: 1300px;
+}
+
+.homeVideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+}
+
+#premierePage{
+    width: 100%;
+    height:100vh;
+}
+
+#premierePage video{
+    position: absolute;
+}
+
+.logo{
+    top: 32px;
+    margin-left: 2%;
+    position: absolute;
+    z-index: 0;
+}
+
+.logo img{
+    width: 60%;
+    height: auto;
+}
+
+.fondBlanc{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.envol{
+    top: 0;
+    width: 100%;
+    position: absolute;
+    display: block;
+    transform: translate(44%,45%);
+    text-decoration: none;
+    font-size: 21px;
+    color: #1b87de;
+    text-transform: uppercase;
+}
+
+#premierePage h1{
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+#premierePage h1:after{
+    content: '';
+    background-color: white;
+    display: block;
+    width: 120px;
+    height: 1.5px;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 65px;
+}
+
+.texteHeader{
+    color: white;
+    line-height: 30px;
+    width: 60%;
+    height: 180px;
+    margin: 0 auto;
+    font-weight: 100;
+}
+
+.texteHeader span{
+    font-weight: bold;
+}
+
+.jouer{
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: #1b87de;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.scrollez{
+    position: absolute;
+    width: 100%;
+    transform: translate(42%,42%);
+    bottom: 20px;
+    color : white;
+    z-index: 5;
+}
+
+.scroll{
+    width: 10px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 12%;
+    bottom: 20px;
+    z-index: 8;
+}
+
+#premierePage nav{
+    position: absolute;
+    width: 100%;
+    bottom: 16px;
+    z-index: 3;
+}
+
+#premierePage nav ul li{
+    display: inline-block;
+    margin-left: 5%;
+}
+
+#premierePage nav ul li:first-child{
+    display: inline-block;
+    margin-left: 2%;
+}
+
+
+#premierePage nav ul li a{
+    text-decoration: none;
+    color:#1b87de;
+
+}
+
+
+.hoverBlanc{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 20%;
+    height: auto;
+    z-index: 1;
+}
+
+.hoverBleu{
+    bottom:0;
+    left: 0;
+    position: absolute;
+    width: 20%;
+    height: auto;
+    z-index: 2;
+    opacity: 0;
+}
+
+.fondPafBlanc{
+    bottom: -0.5px;
+    left: 50px;
+    position: absolute;
+    width: 31%;
+    height: auto;
+    z-index: -2;
+}
+
+.fondPafBleu{
+    bottom: -0.5px;
+    left: 50px;
+    position: absolute;
+    width: 31%;
+    height: auto;
+    z-index:0;
+    opacity: 0;
+}
+
+
+
+/** LE SALON DU BOURGET **/
+
+#salon{
+    width: 100%;
+    height: 380px;
+    background-image: url('img/fondSalon.png');
+    background-color: #fff;
+}
+
+.gauche{
+    float: left;
+    margin-left: 15%;
+    width: 50%;
+}
+
+.droite{
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.droite img{
+    width: 100%;
+    height: auto;
+    min-width: 640px;
+    max-height: 380px;
+}
+
+.gauche img{
+    width: 100%;
+    height: auto;
+    min-width: 640px;
+    max-height: 380px;
+}
+
+#salon h2{
+    padding-left: 0;
+    font-size: 26px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    color: #1b87de;
+}
+
+
+.description{
+    font-size: 12px;
+    width: 60%;
+    height: 245px;
+    line-height: 18px;
+    padding-top:65px;
+    box-sizing: border-box;
+    padding-left: 0;
+    white-space: pre-line;
+}
+
+.description span{
+    font-weight: bold;
+}
+
+#presentation{
+    margin-top: 5px;
+    width: 100%;
+    height: 380px;
+    background-image:url('img/fondtransp.png');
+    background-size: cover;
+}
+
+#presentation h2{
+    margin-right: 41%;
+    padding-right: 0;
+    font-size: 26px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    color: #1b87de;
+}
+
+#presentation .gauche{
+    margin-left: 0px;
+}
+
+#presentation .droite{
+    float: right;
+}
+
+#presentation .description{
+    text-align: right;
+}
+
+#video{
+    clear: both;
+    margin-bottom: 5px;
+}
+
+#patrouille{
+    clear: both;
+}
+
+#patrouille h2{
+    padding-left: 0;
+    font-size: 26px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    color: #1b87de;
+    padding-left: 15%;
+
+}
+
+#patrouille .description{
+    padding-left: 15%;
+    width: 70%;
+}
+
+#patrouille button{
+    background-color:#1b87de;
+    width: 250px;
+    height: 50px;
+    margin-top: 65px;
+    margin-left: 15%;
+    border: none;
+    color : white;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.chaine{
+    margin-left: 6%;
+    position: absolute;
+}
+
+footer{
+    margin-top: 65px;
+    background-color:#1b87de;
+    height: 300px;
+    padding-top: 65px;
+}
+
+footer h2 {
+    color : white;
+    padding-left: 15%;
+}
+
+footer input {
+    margin-top: 25px;
+    width: 200px;
+    height: 25px;
+    margin-left: 15%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+footer input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+
+footer input:focus
+{ outline:none;
+}
+
+.barre
+{
+    position:relative;
+    display:block;
+    width: 205px;
+    margin-left: 15%;
+    margin-top: -1px;
+}
+.barre:before, .barre:after     {
+    content:'';
+    height:3px;
+    width:0;
+    position:absolute;
+    background:white;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.barre:before {
+    left:50%;
+}
+.barre:after {
+    right:50%;
+}
+
+footer input:focus ~ .barre:before, input:focus ~ .barre:after {
+    width:50%;
+}
+
+.fleche{
+    position: absolute;
+    margin-left: 32%;
+    margin-top: -1.8%;
+}
+
+.soumettre{
+    position: absolute;
+    margin-left: 32%;
+    margin-top: -1.8%;
+    width: 20px;
+    height: 20px;
+}
+
+footer nav{
+    display: inline-block;
+    margin-top: 65px;
+    width: 75%;
+}
+
+footer nav ul li {
+    display: inline-block;
+    margin-left: 8%;
+}
+
+footer nav ul li:first-child {
+    margin-left: 20%;
+}
+
+footer nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+footer .logo{
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    margin-left:5%;
+}
+
+
+/** PAGE PROFIL PILOTE **/
+
+.classProfilVideo{
+    width: 100%;
+    z-index: -9;
+    margin-top: -125px;
+    position: absolute;
+}
+
+
+
+.profil{
+    float: left;
+    width: 100%;
+    margin-right: -14%;
+    margin-top: 25px;
+    margin-left: -79%;
+
+}
+
+.gras{
+    font-weight: 600;
+}
+
+.photo{
+    margin-top: 30px;
+    width: 15%;
+    height: auto;
+    float: right;
+    margin-right: -2%;
+}
+
+.photo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.statistiques2{
+    margin-top: 15%;
+    width: 0%;
+    float: left;
+    margin-left: 305px;
+
+}
+
+.statistiques{
+    margin-top: 15%;
+    width: 0%;
+    float: left;
+    margin-left: 30%
+
+}
+
+
+.titre{
+    clear: both;
+    width: 300px;
+    height: 25px;
+    background-color: #1b87de;
+    padding-left: 10px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.tableau{
+    width:300px;
+    height: 240px;
+    background-color: white;
+    color:#1b87de;
+    padding: 25px;
+    box-sizing: border-box;
+
+}
+
+.tableau ul, .tableau ul li, .tableau div, .tableau h3, .tableau input{
+    padding-bottom: 20px;
+}
+
+
+
+
+
+.rang_image{
+    width: 25px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/** PAGE CLASSEMENT DU JOUEUR **/
+
+
+.classClassementVideo{
+    width: 100%;
+    margin-top: -125px;
+    z-index: -9;
+    position: absolute;
+}
+
+.logoClassement{
+    position: absolute;
+    top: 32px;
+    margin-left: 2%;
+    z-index: 1;
+}
+
+.logoClassement img{
+    width: 60%;
+    height: auto;
+}
+
+.leftClassement{
+    color: white;
+    width: 39%;
+    float: left;
+    margin-left: 7%;
+}
+.lots{margin-top: 60px;
+    font-size: 20px;
+    color: white;}
+.place{
+    margin-top: 50px;
+    font-size: 25px;
+}
+.rightClassement{
+    width: 25%;
+    margin-left: 25px;
+    float: left;
+    font-size: 22px;
+}
+.rightClassement span{
+    font-weight: 700;
+}
+.rightClassement p{
+    margin-bottom: 15px;
+}
+
+.classement{
+    position: absolute;
+    top : 30%;
+    width: 100%;
+}
+table{
+    width: 100%;
+    overflow: scroll;
+
+}
+
+th{
+
+    background-color:#1b87de;
+}
+
+td{
+    text-align: center;
+}
+
+.leftClassement h1{
+    font-size:  22px;
+    margin-bottom: 20px;
+}
+
+.separate{
+    margin-left: 30px;
+    font-size: 25px;
+}
+/*sections*/
+.first{
+    background: url('../img/ex1.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 33%;
+    float: left;
+    margin-left: -6%;
+    position: absolute;
+}
+
+.third{
+    background: url('../img/ex.png') no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    float: right;
+    position: relative;
+    margin-right: -6%;
+    height: 100vh;
+    width: 33%;
+}
+
+/*buttons*/
+
+.connexion{
+    float: right;
+    background-color: #1b87be;
+    width: 160px;
+    height: 37px;
+    border-style: none;
+    color: white;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'Lato';
+    margin-left: 87%;
+    position: fixed;
+    top: 2%;
+    left: 0;
+    z-index: 9999;
+}
+
+.connexion2{
+    float: left;
+    background-color: #1b87be;
+    width: 160px;
+    height: 37px;
+    border-style: none;
+    color: white;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'Lato';
+    margin-left: 1%;
+    position: fixed;
+    top: 2%;
+    left: 0;
+    z-index: 9999;
+}
+
+img, .mid{
+    margin: 0 0 0 30%;
+
+}
+.mid{
+    margin: 2% 0px 0 10%;
+    background-color: #1b87be;
+    width: 169px;
+    height: 47px;
+    border-style: none;
+    color: white;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: 'Lato';
+}
+.third>img{
+    margin: 52% 0 0 51%;
+}
+.third>.bt3{
+    margin-left: 38%;
+}
+
+.first>img{
+    margin: 52% 0 0 42%;
+}
+.first>.bt1{
+    margin-left: 31%;
+}
+
+.second>img{
+    margin: 35% 0 0 45%
+}
+.second>button{
+    margin: 12px 0 0 39%;
+}
+button:hover{
+    cursor: pointer;
+}
+@media screen and (min-width: 1920px)
+{
+    .first{width: 35%;}
+    .second{
+        width: 59%;
+        margin-right: -247px;
+    }
+    .connexion{margin: 10%;}
+    .mid{margin: 0 0 0 10%;}
+    img{margin: 0 0 33px 30%;}
+    .second>button {
+        margin: 10px 0 0 41%;}
+    .second>img {
+        margin: 47% 0 0 45%;}
+    .third>img {
+        margin: 55% 0 0 59%;}
+    .third>button {
+        margin-left: 50%;}
+}
