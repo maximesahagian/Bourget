@@ -18,7 +18,7 @@
 <div class="photo">
     <div class="profil">
         Profil du pilote : <span class="gras">{{Auth::user()->pseudo}}</span>
-    </div><img src="{{asset('img/'.app('\App\Http\Controllers\ProfileController')->getImgLink())}}" alt=""></div>
+    </div><img src="{{asset('img/profile_pictures/'.app('\App\Http\Controllers\ProfileController')->getImgLink())}}" alt=""></div>
 <section class="resultats">
     <div class="statistiques">
         <div class="titre">Statistiques</div>
@@ -40,8 +40,17 @@
             <div class="rang">Vous êtes <img class="rang_image" src="img/colonel.png" alt="">Colonel</div>
             <hr/>
             <h3>Autocollant de l'avion</h3>
-            <input type="file">
-
+            {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
+                    {!! Form::file('image') !!}
+                    <p class="errors">{!!$errors->first('image')!!}</p>
+                    @if(Session::has('error'))
+                        <p class="errors">{!! Session::get('error') !!}</p>
+                    @endif
+            <div id="success"> </div>
+            {!! Form::submit('Submit', array('class'=>'send-btn')) !!}
+            {!! Form::close() !!}
+            <?php
+                ?>
         </div>
     </div>
 

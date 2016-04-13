@@ -13,6 +13,8 @@
 
 Route::get('/jeu' , 'JeuController@index');
 
+Route::post('apply/upload', 'Uploaded@upload');
+
 Route::post('/newsletterok', 'NewsletterController@insert');
 
 Route::get('/', function () {
