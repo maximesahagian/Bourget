@@ -23,12 +23,11 @@ class Uploaded extends Controller
             return Redirect::to('jeu/profile')->withInput()->withErrors($validator);
         }
         else {
-            // checking file is valid.
             if (Input::file('image')->isValid()) {
                 $destinationPath = public_path()."/img/profile_pictures";
                 $extension = Input::file('image')->getClientOriginalExtension();
                 $idAuth = Auth::user()->id;
-                $fileName = $idAuth.'.'.$extension;
+                $fileName = $idAuth.'.png';
                 if($extension == "png" || $extension == "jpg" || $extension == "jpeg"){
                     Input::file('image')->move($destinationPath, $fileName);
                     Session::flash('success', "L'upload est bien effectué");
