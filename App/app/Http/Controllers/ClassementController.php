@@ -28,15 +28,15 @@ class ClassementController extends Controller
         $i = 1;
         foreach ($users as $user) {
             if($i == 3){
-                echo "<ul class='infos'><li>".$i."</li>";
-                echo "<li>".$user->username."</li>";
-                echo "<li>".$user->score."</li> </ul></div> <span class=\"separate\">...</span><div class=\"classet\">";
+                echo "<tr><td>".$i."</td>";
+                echo "<td>".$user->username."</td>";
+                echo "<td>".$user->score."</td></tr> <span class=\"separate\">...</span><div class=\"classet\">";
             }
 
             else{
-                echo "<ul class='infos'><li>".$i."</li>";
-                echo "<li>".$user->username."</li>";
-                echo "<li>".$user->score."</li></ul>";
+                echo "<tr><td>".$i."</td>";
+                echo "<td>".$user->username."</td>";
+                echo "<td>".$user->score."</td></tr>";
             }
             $i++;
         }

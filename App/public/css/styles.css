@@ -5,6 +5,7 @@ body{
     overflow-x: hidden;
 }
 
+/** HOME PAGE **/
 
 /** PREMIERE PAGE **/
 
@@ -16,13 +17,14 @@ body{
     z-index: -2;
 }
 
-video{
+.classHomeVideo{
     width: 100%;
     z-index: -5;
     margin-top: -125px;
+    max-height: 1300px;
 }
 
-.video{
+.homeVideo{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -69,7 +71,7 @@ video{
     text-transform: uppercase;
 }
 
-h1{
+#premierePage h1{
     margin-top: 10%;
     text-align: center;
     color: white;
@@ -78,7 +80,7 @@ h1{
     text-transform: uppercase;
 }
 
-h1:after{
+#premierePage h1:after{
     content: '';
     background-color: white;
     display: block;
@@ -105,7 +107,7 @@ h1:after{
 .jouer{
     display: block;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 5%;
     color: white;
     text-decoration: none;
     width: 150px;
@@ -130,7 +132,7 @@ h1:after{
     height: auto;
     display: block;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 12%;
     bottom: 20px;
     z-index: 8;
 }
@@ -144,12 +146,12 @@ h1:after{
 
 #premierePage nav ul li{
    display: inline-block;
-    margin-left: 80px;
+    margin-left: 5%;
 }
 
 #premierePage nav ul li:first-child{
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 2%;
 }
 
 
@@ -224,20 +226,25 @@ h1:after{
 .droite img{
     width: 100%;
     height: auto;
+    min-width: 640px;
+    max-height: 380px;
 }
 
 .gauche img{
     width: 100%;
     height: auto;
+    min-width: 640px;
+    max-height: 380px;
 }
 
-h2{
+#salon h2{
     padding-left: 0;
     font-size: 26px;
     padding-top: 60px;
     box-sizing: border-box;
     color: #1b87de;
 }
+
 
 .description{
     font-size: 12px;
@@ -247,6 +254,7 @@ h2{
     padding-top:65px;
     box-sizing: border-box;
     padding-left: 0;
+    white-space: pre-line;
 }
 
 .description span{
@@ -261,12 +269,21 @@ h2{
     background-size: cover;
 }
 
+#presentation h2{
+    margin-right: 41%;
+    padding-right: 0;
+    font-size: 26px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    color: #1b87de;
+}
+
 #presentation .gauche{
     margin-left: 0px;
 }
 
 #presentation .droite{
-
+float: right;
 }
 
 #presentation .description{
@@ -275,6 +292,7 @@ h2{
 
 #video{
     clear: both;
+    margin-bottom: 5px;
 }
 
 #patrouille{
@@ -282,7 +300,13 @@ h2{
 }
 
 #patrouille h2{
+    padding-left: 0;
+    font-size: 26px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    color: #1b87de;
     padding-left: 15%;
+
 }
 
 #patrouille .description{
@@ -290,7 +314,7 @@ h2{
     width: 70%;
 }
 
-button{
+#patrouille button{
     background-color:#1b87de;
     width: 250px;
     height: 50px;
@@ -302,25 +326,24 @@ button{
     position: relative;
 }
 
-button img{
+.chaine{
+    margin-left: 6%;
     position: absolute;
-    z-index: 2;
 }
 
 footer{
     margin-top: 65px;
     background-color:#1b87de;
     height: 300px;
+    padding-top: 65px;
 }
-
-
 
 footer h2 {
     color : white;
     padding-left: 15%;
 }
 
-input {
+footer input {
     margin-top: 25px;
     height: 25px;
     background-color: transparent;
@@ -330,12 +353,12 @@ input {
     font-weight: 100;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+footer input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: white;
 }
 
 
-input:focus
+footer input:focus
 { outline:none;
 }
 
@@ -343,7 +366,7 @@ input:focus
 {
     position:relative;
     display:block;
-    width: 190px;
+    width: 205px;
     margin-left: 15%;
     margin-top: -1px;
 }
@@ -364,8 +387,22 @@ input:focus
     right:50%;
 }
 
-input:focus ~ .barre:before, input:focus ~ .barre:after {
+footer input:focus ~ .barre:before, input:focus ~ .barre:after {
     width:50%;
+}
+
+.fleche{
+    position: absolute;
+    margin-left: 32%;
+    margin-top: -1.8%;
+}
+
+.soumettre{
+    position: absolute;
+    margin-left: 32%;
+    margin-top: -1.8%;
+    width: 20px;
+    height: 20px;
 }
 
 footer nav{
@@ -394,4 +431,166 @@ footer .logo{
     position: relative;
     top: 20px;
     margin-left:5%;
+}
+
+
+/** PAGE PROFIL PILOTE **/
+
+.classProfilVideo{
+    width: 100%;
+    z-index: -5;
+    margin-top: -125px;
+    position: absolute;
+}
+
+
+
+.profil{
+    float: left;
+    width: 85%;
+    margin-right: 5%;
+    margin-top: 55px;
+    margin-left: 70%;
+}
+
+.gras{
+    font-weight: 600;
+}
+
+.photo{
+    margin-top: -35px;
+    width: 15%;
+    height: auto;
+    float: right;
+    margin-right: -4%;
+}
+
+.photo img{
+    width: 70px;
+    height: auto;
+}
+
+.statistiques{
+    margin-top: 15%;
+    clear: both;
+    width: 30%;
+    float: left;
+    margin-left: 10%;
+}
+
+
+.titre{
+    clear: both;
+    width: 280px;
+    height: 25px;
+    background-color: #1b87de;
+    padding-left: 10px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.tableau{
+    width:280px;
+    height: 140px;
+    background-color: white;
+    color:#1b87de;
+
+}
+
+.tableau ul{
+    padding-top: 10px;
+}
+
+.tableau ul li{
+    padding-top: 10px;
+    margin-left:45px;
+}
+
+.points{
+    line-height: 30px;
+    margin-top: 20%;
+    float: right;
+    width: 30%;
+    margin-right: 28%;
+}
+
+.rangImage{
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/** PAGE CLASSEMENT DU JOUEUR **/
+
+
+.classClassementVideo{
+    width: 100%;
+    margin-top: -125px;
+    z-index: 0;
+}
+
+.logoClassement{
+    position: absolute;
+    top: 32px;
+    margin-left: 2%;
+    z-index: 1;
+}
+
+.logoClassement img{
+    width: 60%;
+    height: auto;
+}
+
+.leftClassement{
+    color: white;
+    width: 40%;
+    float: left;
+    margin-left: 12%;
+}
+.lots{margin-top: 60px;
+    font-size: 20px;
+    color: white;}
+.place{
+    margin-top: 50px;
+    font-size: 25px;
+}
+.rightClassement{
+    width: 30%;
+    margin-right: 100px;
+    float: right;
+    font-size: 22px;
+}
+.rightClassement span{
+    font-weight: 700;
+}
+.rightClassement p{
+    margin-bottom: 15px;
+}
+
+.classement{
+    position: absolute;
+    top : 30%;
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+th{
+
+    background-color:#1b87de;
+}
+tr th {
+    margin-right: 5px;
+}
+
+.leftClassement h1{
+    font-size:  22px;
+    margin-bottom: 20px;
+}
+
+.separate{
+    margin-left: 30px;
+    font-size: 25px;
 }
