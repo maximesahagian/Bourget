@@ -6,6 +6,7 @@ $('.hoverBleu').mouseenter(function(){
         "color":"white"
     });
 });
+
 $('.hoverBleu').mouseleave(function(){
     $('.hoverBleu').css({
         "opacity" : "0"

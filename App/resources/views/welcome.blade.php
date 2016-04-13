@@ -101,7 +101,7 @@
     <a class="logo" href="#premierePage"><img src="{{asset("img/logo.png")}}" alt=""></a>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+
 
 
 
@@ -120,7 +120,6 @@ $('.envol').click(function() {
         $('.envol').click(function() {
             $(".envol").attr("href", "simulator")
         });
-
 <?php
     }?>
 
