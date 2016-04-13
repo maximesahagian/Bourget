@@ -23,7 +23,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('pseudo') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Pseudo</label>
 
                             <div class="col-md-6">
