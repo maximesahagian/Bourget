@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Classement</title>
-    <link rel="stylesheet" href="{{asset("css/reset.css")}}">
-    <link rel="stylesheet" href="{{asset("css/styles_class.css")}}">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="video">
     <video src="{{asset("video/patrouilleFrance.mp4")}}" autoplay loop></video>
 </div>
@@ -53,7 +47,5 @@
 
     </div>
 </section>
-</body>
-</html>
-
+@endsection
 
