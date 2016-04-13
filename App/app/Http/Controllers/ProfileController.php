@@ -45,7 +45,7 @@ class ProfileController extends Controller
             echo "<span class=\"gras\">Non classé</span>";
         }
         else{
-            echo $user->bestTime;
+            echo $user->bestTime." secondes";
         }
     }
 
@@ -57,7 +57,7 @@ class ProfileController extends Controller
             echo "<span class=\"gras\">Non classé</span>";
         }
         else{
-            echo $user->timeTotal;
+            echo $user->timeTotal." secondes";
         }
     }
 

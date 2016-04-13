@@ -12,14 +12,15 @@
 <body>
 <section class="first">
     <img src="{{asset('img/signs.png')}}" alt="">
-    <button class="mid bt1" href="#first">Classement</button>
+    <a href="{{ action("ClassementController@index") }}"><button class="mid bt1" href="#first">Classement</button></a>
 </section>
 
 
 <section class="third">
     <button class="connexion">{{Auth::user()->pseudo}} <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
     <img src="{{asset('img/people.png')}}" alt="">
-    <button class="mid bt3" href="profile">Profil du pilote</button>
+
+    <a href="{{ action("ProfileController@index") }}"><button class="mid bt3" href="profile">Profil du pilote</button></a>
 </section>
 
 <section class="second" id="clear">
@@ -29,17 +30,10 @@
 
 <script>
 
-    $( ".bt1" ).click(function() {
-        window.location.href = "jeu/classement";
-    });
 
     $( ".bt2" ).click(function() {
         $( ".first").stop().animate({ "left": "-=9%"}, 800 );
         $( ".third").stop().animate({ "right": "-=9%"}, 800 );
-    });
-
-    $( ".bt3" ).click(function() {
-        window.location.href = "jeu/profile";
     });
 
 

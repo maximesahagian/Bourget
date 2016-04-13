@@ -6,7 +6,7 @@ html, body{
 }
 /*sections*/
 .first{
-    background: url(../img/ex1.png) no-repeat; 
+    background: url(../img/ex1.png) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -75,13 +75,13 @@ img, .mid{
     color: white;
     vertical-align: middle;
     font-size: 16px;
-    font-family: 'Lato';    
+    font-family: 'Lato';
 }
 .third>img{
     margin: 52% 0 0 51%;
 }
-.third>.bt3{
-    margin-left: 40% 
+.third .bt3{
+    margin-left: 40%
 }
 .second>img{
     margin: 35% 0 0 45%
@@ -97,7 +97,7 @@ button:hover{
     .first{width: 35%;}
     .second{
     width: 59%;
-    margin-right: -247px;   
+    margin-right: -247px;
     }
     .connexion{margin: 10%;}
     .mid{margin: 15px 0 0 -20%;}
