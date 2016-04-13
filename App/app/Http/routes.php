@@ -28,4 +28,4 @@ Route::auth();
 
 Route::get('/jeu', 'JeuController@index');
 
-Route::get('/home', 'HomeController@index');
+

@@ -13,7 +13,7 @@
     <h1>Gagnez de la hauteur pour le salon du bourget</h1>
     <div class="texteHeader">
         A l’occasion du <span>52ème salon international de l’aeronautique et de l’espace</span> participez à l’opération Bourget d’en haut en partenariat avec la Patrouille de France.
-        Vivez l’expérience des meileurs pilotes de l’Armée de l’air et tentez de gagner un vol en alphajet, des places pour le 52ème Salon du Bourget ainsi que des centaines d’autres cadeaux à gagner.
+        Vivez l’expérience des meilleurs pilotes de l’Armée de l’air et tentez de gagner un vol en alphajet, des places pour le 52ème Salon du Bourget ainsi que des centaines d’autres cadeaux à gagner.
         <a class="jouer" href="">Acceder au jeu</a>
     </div>
     <a href="#salon">
