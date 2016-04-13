@@ -15,14 +15,11 @@ use Illuminate\Support\Facades\Auth;
 class Uploaded extends Controller
 {
     public function upload() {
-        // getting all of the post data
         $file = array('image' => Input::file('image'));
         // setting up rules
-        $rules = array('image' => 'required',); //mimes:jpeg,bmp,png and for max size max:10000
-        // doing the validation, passing post data, rules and the messages
+        $rules = array('image' => 'required',);
         $validator = Validator::make($file, $rules);
         if ($validator->fails()) {
-            // send back to the page with the input data and errors
             return Redirect::to('jeu/profile')->withInput()->withErrors($validator);
         }
         else {
@@ -31,18 +28,23 @@ class Uploaded extends Controller
                 $destinationPath = public_path()."/img/profile_pictures";
                 $extension = Input::file('image')->getClientOriginalExtension();
                 $idAuth = Auth::user()->id;
-                $fileName = $idAuth.'.'.$extension; // renameing image
-                Input::file('image')->move($destinationPath, $fileName);
-                Session::flash('success', "L'upload est bien effectué");
+                $fileName = $idAuth.'.'.$extension;
+                if($extension == "png" || $extension == "jpg" || $extension == "jpeg"){
+                    Input::file('image')->move($destinationPath, $fileName);
+                    Session::flash('success', "L'upload est bien effectué");
+                    DB::table('users')
+                        ->where('id', $idAuth)
+                        ->update(array('imgLink' => $idAuth.".png"));
+                    return Redirect::to('jeu/profile');
+                }
 
-                DB::table('users')
-                    ->where('id', $idAuth)
-                    ->update(array('imgLink' => $idAuth.".png"));
+                else{
+                    Session::flash('error', 'Le fichier est invalide, extension incorrecte');
+                    return Redirect::to('jeu/profile');
+                }
 
-                return Redirect::to('jeu/profile');
             }
             else {
-                // sending back with error message.
                 Session::flash('error', 'Le fichier est invalide');
                 return Redirect::to('jeu/profile');
             }

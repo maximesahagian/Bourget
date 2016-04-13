@@ -37,14 +37,22 @@
         <div class="tableau">
 
             <div class="total">Score : {{app('\App\Http\Controllers\ProfileController')->getScore()}}</div>
-            <div class="rang">Vous êtes <img class="rang_image" src="img/colonel.png" alt="">Colonel</div>
+            <div class="rang">Vous êtes : <img class="rang_image" src="{{asset('img/colonel.png')}}" alt="">Colonel</div>
             <hr/>
             <h3>Autocollant de l'avion</h3>
+            <div class="about-section">
+                <div class="text-content">
+                    <div class="span7 offset1">
+                        @if(Session::has('success'))
+                            <div class="alert-box success">
+                                <h2 style="color: green">{!! Session::get('success') !!}</h2>
+                            </div>
+                        @endif
             {!! Form::open(array('url'=>'apply/upload','method'=>'POST', 'files'=>true)) !!}
                     {!! Form::file('image') !!}
                     <p class="errors">{!!$errors->first('image')!!}</p>
                     @if(Session::has('error'))
-                        <p class="errors">{!! Session::get('error') !!}</p>
+                        <p class="errors" style="color: red;">{!! Session::get('error') !!}</p>
                     @endif
             <div id="success"> </div>
             {!! Form::submit('Submit', array('class'=>'send-btn')) !!}
@@ -54,14 +62,13 @@
         </div>
     </div>
 
-
+</section>
     <section class="first">
         <button class="connexion2">{{Auth::user()->pseudo}} <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
         <img src="{{asset('img/transport.png')}}" alt="">
         <button class="mid bt1">Décollage</button>
     </section>
 
-</section>
 
 <script>
 
