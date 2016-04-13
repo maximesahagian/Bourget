@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/jeu' , 'JeuController@index');
 
 Route::post('/newsletterok', 'NewsletterController@insert');
 
