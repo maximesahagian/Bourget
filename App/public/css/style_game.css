@@ -1,0 +1,113 @@
+/*font*/
+@import url(https://fonts.googleapis.com/css?family=Lato);
+html, body{
+    height: 100%;
+     overflow:hidden;
+}
+/*sections*/
+.first{
+    background: url(../img/ex1.png) no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height: 100%;
+    width: 33%;
+    float: left;
+    position: absolute;
+}
+
+.second{
+    background: url(../img/ex.png) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    float: right;
+    width: 52%;
+    height: 100%;
+    position: relative;
+    margin-right: -115px;
+
+}
+.third{
+      background: url(../img/ex3.png
+      ) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    float: right;
+    position: relative;
+    width: 33%;
+    height: 100%;
+
+}
+
+/*buttons*/
+
+.connexion{
+    float: right;
+    background-color: #1b87be;
+    width: 160px;
+    height: 37px;
+    border-style: none;
+    color: white;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'Lato';
+    margin-left: 88%;
+    position: fixed;
+    top: 2%;
+    left: 0;
+    z-index: 9999;
+}
+
+img, .mid{
+    margin: 55% 0 0 30%;
+}
+.mid{
+    margin: 15px 0 0 20%;
+    background-color: #1b87be;
+    width: 169px;
+    height: 47px;
+    border-style: none;
+    color: white;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: 'Lato';    
+}
+.third>img{
+    margin: 52% 0 0 51%;
+}
+.third>.bt3{
+    margin-left: 40% 
+}
+.second>img{
+    margin: 35% 0 0 45%
+}
+.second>button{
+    margin: 12px 0 0 39%;
+}
+button:hover{
+    cursor: pointer;
+}
+@media screen and (min-width: 1920px)
+{
+    .first{width: 35%;}
+    .second{
+    width: 59%;
+    margin-right: -247px;   
+    }
+    .connexion{margin: 10%;}
+    .mid{margin: 15px 0 0 -20%;}
+    img{margin: 80% 0 33px 30%;}
+    .second>button {
+    margin: 10px 0 0 41%;}
+    .second>img {
+    margin: 47% 0 0 45%;}
+    .third>img {
+    margin: 55% 0 0 59%;}
+    .third>button {
+    margin-left: 50%;}
+}

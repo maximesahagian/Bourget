@@ -91,7 +91,7 @@
         <nav>
             <ul>
                 <li><a href="">TOUS DROITS RÉSERVÉS ©2016 BOURGET D’EN HAUT</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="">REGLEMENT</a></li>
                 <li><a href="">MENTIONS LEGALES</a></li>
             </ul>
         </nav>
