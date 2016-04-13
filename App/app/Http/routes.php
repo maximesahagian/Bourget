@@ -27,6 +27,8 @@ Route::auth();
 
 Route::get('/jeu/classement', 'ClassementController@index');
 
+Route::get('/jeu/profile', 'ProfileController@index');
+
 Route::get('/jeu', 'JeuController@index');
 
 

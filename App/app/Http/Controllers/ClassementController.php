@@ -53,22 +53,26 @@ class ClassementController extends Controller
         $users = DB::table('classement')->orderBy('score','desc')->get();
         $i = 1;
         $pseudoAuth = Auth::user()->pseudo;
-        
-        foreach($users as $user){
-            if($user->pseudo == $pseudoAuth){
-                if($i == 1){
-                    echo "Vous êtes <span>".$i."er</span>, bravo";
+        $user = DB::table('classement')->where('pseudo',$pseudoAuth)->first();
+
+        if($user == null){
+            echo "Vous n'êtes actuellement pas classé";
+        }
+
+        else{
+            foreach($users as $user){
+                if($user->pseudo == $pseudoAuth){
+                    if($i == 1){
+                        echo "Vous êtes <span>".$i."er</span>, bravo";
+                    }
+
+                    else{
+                        echo "Vous êtes <span>".$i."ème</span>, bravo";
+                    }
                 }
 
-                else{
-                    echo $i."ème";
-                }
+                $i++;
             }
-
-            else{
-                echo "Vous n'avez toujours pas de classement";
-            }
-            $i++;
         }
     }
 
