@@ -18,13 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/jeu/classement', 'ClassementController@index');
 
 Route::get('/ajax/GetContent', array(
     'uses'  =>  'AjaxController@loadContent'
 ));
 
 Route::auth();
+
+Route::get('/jeu/classement', 'ClassementController@index');
 
 Route::get('/jeu', 'JeuController@index');
 

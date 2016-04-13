@@ -11,15 +11,24 @@
                 Classement des pilotes :
             </h1>
             <table>
+                <tr>
+
+                    <th>Position</th>
+                    <th>Pseudo</th>
+                    <th>Points</th>
+                    <th>Nombre de parties</th>
+
+                </tr>
                 {{app('\App\Http\Controllers\ClassementController')->readScore()}}
             </table>
         </div>
         </div>
         <div class="rightClassement">
-            <p><span>Lumi</span> est actuellement le meilleur pilote !
-                Suivi de près par <span>Wladouche</span> et <span>Delmousse</span> !
+            <p><span> {{app('\App\Http\Controllers\ClassementController')->getFirsts(1)}}</span> est actuellement le meilleur pilote !
+                Suivi de près par <span>{{app('\App\Http\Controllers\ClassementController')->getFirsts(2)}}</span> et
+                <span>{{app('\App\Http\Controllers\ClassementController')->getFirsts(3)}}</span> !
             </p>
-            <p class="place">Vous êtes <span>175eme</span>, bravo !</p>
+            <p class="place"><span>{{app('\App\Http\Controllers\ClassementController')->getRanking()}}</span></p>
 
             <p class="lots">Les lots à gagner sont:
                 <br/>
