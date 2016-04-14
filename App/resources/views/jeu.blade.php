@@ -24,8 +24,8 @@
     <script type="text/javascript">
         <!--
         var config = {
-            width: 1200,
-            height: 800,
+            width: 1260,
+            height: 600,
             params: { enableDebugging:"0" }
 
         };
@@ -107,6 +107,8 @@
         }
         div#unityPlayer {
             cursor: default;
+            margin-left: 90px;
+            margin-top: 100px;
             height: 100vh;
             width: 100vh;
         }
@@ -116,6 +118,8 @@
 </head>
 <body>
 <section class="first">
+
+
     <a href="{{ action("JeuController@logout") }}">
     <button class="connexion2"><span>Déconnexion</span></button>
     </a>
@@ -126,6 +130,10 @@
 
 <section class="third">
     <button class="connexion">{{Auth::user()->pseudo}} | <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
+
+    <a href="{{ action("JeuController@index") }}">
+        <button class="retour connexion" style="width: 91px; margin-left: 93.7%;"><span>Retour</span></button>
+    </a>
     <img class="" src="{{asset('img/people.png')}}" alt="">
 
     <a href="{{ action("ProfileController@index") }}"><button class="mid bt3" href="profile">Profil du pilote</button></a>
@@ -137,70 +145,96 @@
 </section>
 
 
+<section class="touche">
+    <div class="upper upperdown">
+        <button><img class="imgdownup" src="{{asset('img/up.png')}}" alt=""></button>
+        <h3>COMMANDES DE VOL</h3>
+    </div>
+    <div class="bot">
+        <div class="sub">
+            <p>Pour diriger votre appareil:</p>
+            <p>Actions:</p>
+        </div>
+        <div class="controls">
+            <div class="alpha">
+                <ul>
+                    <li>Q</li>
+                    <li>S</li>
+                    <li>F</li>
+                    <li>Z</li>
+                </ul>
+            </div>
+            <div class="arrow">
+                <ul>
+                    <li><</li>
+                    <li><</li>
+                    <li>></li>
+                    <li>></li>
+                </ul>
+            </div>
+        </div>
+        <div class="actions">
+            <p>Booster: <span>Shift</span></p>
+            <p>Fumée: <span>Espace</span></p>
+        </div>
+    </div>
+</section>
+
+
 
 <script>
-    $(document).ready(function() {
-        $(".animsition").animsition({
-            inClass: 'fade-in-right-sm',
-            outClass: 'fade-in--left-sm',
-            inDuration: 1500,
-            outDuration: 800,
-            linkElement: '.animsition-link',
-            // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-            loading: true,
-            loadingParentElement: 'body', //animsition wrapper element
-            loadingClass: 'animsition-loading',
-            loadingInner: '', // e.g '<img src="loading.svg" />'
-            timeout: false,
-            timeoutCountdown: 5000,
-            onLoadEvent: true,
-            browser: [ 'animation-duration', '-webkit-animation-duration'],
-            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-            overlay : false,
-            overlayClass : 'animsition-overlay-slide',
-            overlayParentElement : 'body',
-            transition: function(url){ window.location.href = url; }
-        });
 
-        $(document).ready(function() {
-            $(".animsition2").animsition({
-                inClass: 'fade-in-left-sm',
-                outClass: 'fade-in--right-sm',
-                inDuration: 1500,
-                outDuration: 800,
-                linkElement: '.animsition-link',
-                // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-                loading: true,
-                loadingParentElement: 'body', //animsition wrapper element
-                loadingClass: 'animsition-loading',
-                loadingInner: '', // e.g '<img src="loading.svg" />'
-                timeout: false,
-                timeoutCountdown: 5000,
-                onLoadEvent: true,
-                browser: [ 'animation-duration', '-webkit-animation-duration'],
-                // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-                // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-                overlay : false,
-                overlayClass : 'animsition-overlay-slide',
-                overlayParentElement : 'body',
-                transition: function(url){ window.location.href = url; }
-            });
-        });
-    });
     $( ".bt2" ).one( "click", function() {
 
-                $( ".first").stop().animate({ "left": "-=10%"}, 800 );
-        $( ".third").stop().animate({ "right": "-=10%"}, 800 );
+                $( ".first").stop().animate({ "left": "-=33%"}, 1000 );
+        $( ".third").stop().animate({ "right": "-=33%"}, 1000 );
+        $('.connexion').fadeOut(1000);
+        $('.connexion2').animate({
+            top: "+=350px",
+            width: "-=57px",
+            left: "-=15px"
+        },2000);
+        $('.retour').animate({
+            top: "+=350px",
+        },2000);
+        $('.retour').fadeIn(1000);
     });
 
 
     $(document).ready(function(){
+            $(".retour").hide();
         $(".bt2").click(function(){
             $(".second").fadeOut()
         });
 
     });
+
+
+    $('.upper').click( function(){
+        if(!open){
+            $('.touche').animate({
+                top: "+=400px",
+                left: "-=40px"
+            },2000);
+            open = true;
+            setTimeout(function(){
+                $(".imgdownup").attr('src','{{asset('img/up.png')}}');
+            }, 2000);
+        }
+        else{
+            $('.touche').animate({
+                left: "+=40px",
+                top: "-=400px"
+            },2000);
+            open = false;
+            setTimeout(function(){
+                $(".imgdownup").attr('src','{{asset('img/down.png')}}');
+            }, 2000);
+        }
+    });
+
+
+
 
 </script>
 

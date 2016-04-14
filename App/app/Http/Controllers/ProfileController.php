@@ -136,7 +136,6 @@ class ProfileController extends Controller
             echo "Noobie";
         }
 
-        //<img class="rang_image" src="{{asset('img/colonel.png')}}" alt="">Colonel
 
 
     }
