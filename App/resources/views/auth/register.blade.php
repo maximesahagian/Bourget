@@ -78,13 +78,13 @@
                                 @endif
                             </div>
                         </div>
-                        <a href="{{url('/login')}}" class="btn btn-link">Déjà inscrit ?</a>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button style="margin-left: 0%; margin-bottom: 20px;" type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i>Inscription
                                 </button>
-                            </div>
+                                <a href="{{url('login')}}" style="width: 250px; " class="btn btn-primary">Déjà inscrit ?</a>
+                                </div>
                         </div>
                     </form>
                 </div>

@@ -56,7 +56,24 @@ html, body{
     vertical-align: middle;
     font-size: 14px;
     font-family: 'Lato';
-    margin-left: 88%;
+    margin-left: 87%;
+    position: fixed;
+    top: 2%;
+    left: 0;
+    z-index: 9999;
+}
+
+.connexion2{
+    float: left;
+    background-color: #1b87be;
+    width: 160px;
+    height: 37px;
+    border-style: none;
+    color: white;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'Lato';
+    margin-left: 1%;
     position: fixed;
     top: 2%;
     left: 0;

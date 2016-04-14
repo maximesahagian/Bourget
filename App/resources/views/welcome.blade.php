@@ -195,7 +195,7 @@
         if (Auth::guest()){
             ?>
 $('.envol').click(function() {
-
+    $(".envol").attr("href", "register")
 });
 <?php
         }

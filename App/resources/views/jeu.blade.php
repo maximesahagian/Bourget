@@ -8,16 +8,120 @@
     <link rel="stylesheet" href="{{asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{asset('css/style_game.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
+    <script type="text/javascript">
+        <!--
+        var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+        if (document.location.protocol == 'https:')
+            unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+        document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+        -->
+    </script>
+    <script type="text/javascript">
+        <!--
+        var config = {
+            width: 1200,
+            height: 800,
+            params: { enableDebugging:"0" }
+
+        };
+        var u = new UnityObject2(config);
+
+        jQuery(function() {
+
+            var $missingScreen = jQuery("#unityPlayer").find(".missing");
+            var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+            $missingScreen.hide();
+            $brokenScreen.hide();
+
+            u.observeProgress(function (progress) {
+                switch(progress.pluginStatus) {
+                    case "broken":
+                        $brokenScreen.find("a").click(function (e) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            u.installPlugin();
+                            return false;
+                        });
+                        $brokenScreen.show();
+                        break;
+                    case "missing":
+                        $missingScreen.find("a").click(function (e) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            u.installPlugin();
+                            return false;
+                        });
+                        $missingScreen.show();
+                        break;
+                    case "installed":
+                        $missingScreen.remove();
+                        break;
+                    case "first":
+                        break;
+                }
+            });
+            u.initPlugin(jQuery("#unityPlayer")[0], "{{asset('VoltiGO.unity3d')}}");
+            function setName(name)
+            {
+                u.getUnity().SendMessage("Pseudo", "setName", name)
+            }
+
+            function setTexture(link) {
+                u.getUnity().SendMessage("Autocollant", "SetTexture", link)
+            }
+
+            setTexture('{{asset('img/profile_pictures/'.app('\App\Http\Controllers\ProfileController')->getImgLink())}}');
+
+
+            setName('{{Auth::user()->pseudo}}');
+        });
+        -->
+    </script>
+    <style type="text/css">
+        <!--
+
+        div.broken,
+        div.missing {
+            margin: auto;
+            position: relative;
+            top: 50%;
+            width: 193px;
+        }
+        div.broken a,
+        div.missing a {
+            height: 63px;
+            position: relative;
+            top: -31px;
+        }
+        div.broken img,
+        div.missing img {
+            border-width: 0px;
+        }
+        div.broken {
+            display: none;
+        }
+        div#unityPlayer {
+            cursor: default;
+            height: 100vh;
+            width: 100vh;
+        }
+        -->
+    </style>
+
 </head>
 <body>
 <section class="first">
+    <a href="{{ action("JeuController@logout") }}">
+    <button class="connexion2"><span>Déconnexion</span></button>
+    </a>
     <img src="{{asset('img/signs.png')}}" alt="">
     <a href="{{ action("ClassementController@index") }}"><button class="mid bt1" href="#first">Classement</button></a>
 </section>
 
 
 <section class="third">
-    <button class="connexion">{{Auth::user()->pseudo}} <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
+    <button class="connexion">{{Auth::user()->pseudo}} | <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
     <img src="{{asset('img/people.png')}}" alt="">
 
     <a href="{{ action("ProfileController@index") }}"><button class="mid bt3" href="profile">Profil du pilote</button></a>
@@ -27,126 +131,16 @@
     <img src="{{asset('img/transport.png')}}" alt="">
     <button class="mid bt2" href="#first">Décollage</button>
 </section>
-<style type="text/css">
-    <!--
 
-    a:link, a:visited {
-        color: #000;
-    }
-    a:active, a:hover {
-        color: #666;
-    }
 
-    p.header span {
-        font-weight: bold;
-    }
 
-    div.broken,
-    div.missing {
-        margin: auto;
-        position: relative;
-        top: 50%;
-        width: 193px;
-    }
-    div.broken a,
-    div.missing a {
-        height: 63px;
-        position: relative;
-        top: -31px;
-    }
-    div.broken img,
-    div.missing img {
-        border-width: 0px;
-    }
-    div.broken {
-        display: none;
-    }
-    div#unityPlayer {
-        cursor: default;
-        height: 600px;
-        width: 960px;
-    }
-    -->
-</style>
-<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-<script type="text/javascript">
-    <!--
-    var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-    if (document.location.protocol == 'https:')
-        unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-    document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-    -->
-</script>
-
-<script type="text/javascript">
-    <!--
-    var config = {
-        width: 960,
-        height: 600,
-        params: { enableDebugging:"0" }
-
-    };
-    var u = new UnityObject2(config);
-
-    jQuery(function() {
-
-        var $missingScreen = jQuery("#unityPlayer").find(".missing");
-        var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-        $missingScreen.hide();
-        $brokenScreen.hide();
-
-        u.observeProgress(function (progress) {
-            switch(progress.pluginStatus) {
-                case "broken":
-                    $brokenScreen.find("a").click(function (e) {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        u.installPlugin();
-                        return false;
-                    });
-                    $brokenScreen.show();
-                    break;
-                case "missing":
-                    $missingScreen.find("a").click(function (e) {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        u.installPlugin();
-                        return false;
-                    });
-                    $missingScreen.show();
-                    break;
-                case "installed":
-                    $missingScreen.remove();
-                    break;
-                case "first":
-                    break;
-            }
-        });
-        u.initPlugin(jQuery("#unityPlayer")[0], "{{asset('VoltiGO.unity3d')}}");
-    });
-    -->
-</script>
 <script>
 
 
-    $( ".bt2" ).click(function() {
+    $( ".bt2" ).one( "click", function() {
 
-
-
-        $.ajax({
-            method : 'POST',
-            url: "", // La page qui va faire le traitement
-            success : function(resultat){
-                $('.modale').html(resultat);
-                clearTimeout(cancelMe); // don't run if it hasn't run yet
-                $('#loading').hide(); // hide the loading element if it's shown
-            }
-        })
-
-
-
-        $( ".first").stop().animate({ "left": "-=9%"}, 800 );
-        $( ".third").stop().animate({ "right": "-=9%"}, 800 );
+                $( ".first").stop().animate({ "left": "-=10%"}, 800 );
+        $( ".third").stop().animate({ "right": "-=10%"}, 800 );
     });
 
 
@@ -154,9 +148,10 @@
         $(".bt2").click(function(){
             $(".second").fadeOut()
         });
-    });
-</script>
 
+    });
+
+</script>
 
 
 <div id="unityPlayer">
@@ -171,5 +166,22 @@
         </a>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    function sendScore(score) {
+        $.ajax({
+            url: "score",
+            type: "GET",
+            data: {'score': score,'_token': $('#_token').val()},
+            success: function (data) {
+                console.log('Send Score succesfuly');
+            }
+        });
+    }
+
+
+    sendScore(10);
+</script>
 </body>
 </html>

@@ -15,6 +15,15 @@ Route::get('/jeu' , 'JeuController@index');
 
 Route::post('apply/upload', 'Uploaded@upload');
 
+Route::get('jeu/score', 'JeuController@setScore');
+
+Route::get('logout', 'JeuController@logout');
+
+Route::get('jeu/simulator', array(
+    'as'    => 'simulator',
+    'uses'  => 'JeuController@simulator'
+));
+
 Route::post('/newsletterok', 'NewsletterController@insert');
 
 Route::get('/', function () {

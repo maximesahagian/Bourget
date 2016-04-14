@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Input;
 
 class JeuController extends Controller
 {
@@ -28,5 +29,30 @@ class JeuController extends Controller
     public function index()
     {
         return view('jeu');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
+    }
+
+    public function simulator(){
+        return view('simulator');
+    }
+
+    public function setScore()
+    {
+        if (Auth::check())
+        {
+            $score =  Input::get('score');
+            $user = DB::table('classement')->where('pseudo',Auth::user()->pseudo)->first();
+            $score_actuel = $user->score;
+            $nouveau_score = $score_actuel + $score;
+            DB::table('classement')
+                ->where('pseudo', Auth::user()->pseudo)
+                ->update(['score' => $nouveau_score]);
+        } else {
+            return response('Unauthorized','401');
+        }
     }
 }

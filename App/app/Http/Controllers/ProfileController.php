@@ -77,4 +77,23 @@ class ProfileController extends Controller
             echo "<span class=\"gras\">" .$user->score. "</span> points";
         }
     }
+
+    public function getGrade(){
+        $user = DB::table('classement')->where('pseudo',Auth::user()->pseudo)->first();
+        $score = $user->score;
+
+
+        if($score > 15000){
+            echo "<img class=\"rang_image\" src=\"{{asset('img/colonel.png')}}\" alt=\"\">Colonel";
+        }
+
+        else if($score > 10000){
+            echo "<img class=\"rang_image\" src=\"{{asset('img/colonel.png')}}\" alt=\"\">Lieutenant";
+        }
+
+        //<img class="rang_image" src="{{asset('img/colonel.png')}}" alt="">Colonel
+
+
+    }
+
 }

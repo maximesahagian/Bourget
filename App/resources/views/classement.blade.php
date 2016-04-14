@@ -50,7 +50,7 @@
     </div>
 </section>
 <section class="third">
-    <button class="connexion">{{Auth::user()->pseudo}} <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
+    <button class="connexion">{{Auth::user()->pseudo}} | <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
     <img src="{{asset('img/transport.png')}}" alt="">
     <button class="mid bt3">Décollage</button>
 </section>

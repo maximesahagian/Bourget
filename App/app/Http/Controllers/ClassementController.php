@@ -32,7 +32,7 @@ class ClassementController extends Controller
                 echo "<tr><td>".$i."</td>";
                 echo "<td>".$user->pseudo."</td>";
                 echo "<td>".$user->score."</td>";
-                echo "<td>".$user->nb_parties."</td></tr> <tr style='margin-bottom: 10px;'><td><span class=\"separate\">...</span><div class=\"classet\"></td><td></td><td></td></tr> ";
+                echo "<td>".$user->nb_parties."</td></tr> <tr><td> .........</td><td>.........</td><td>.........</td><td>.........</td></tr> ";
             }
 
             else{
