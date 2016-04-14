@@ -65,6 +65,8 @@
                         break;
                 }
             });
+
+
             u.initPlugin(jQuery("#unityPlayer")[0], "{{asset('VoltiGO.unity3d')}}");
             function setName(name)
             {
@@ -75,10 +77,12 @@
                 u.getUnity().SendMessage("Autocollant", "SetTexture", link);
             }
 
-            setTexture('{{asset('img/profile_pictures/'.app('\App\Http\Controllers\ProfileController')->getImgLink())}}');
+            setTimeout(function(){
+                setTexture('{{asset('img/profile_pictures/'.app('\App\Http\Controllers\ProfileController')->getImgLink())}}');
 
 
-            setName('{{Auth::user()->pseudo}}');
+                setName('{{Auth::user()->pseudo}}');
+            }, 10000);
         });
         -->
     </script>
@@ -132,7 +136,7 @@
     <button class="connexion">{{Auth::user()->pseudo}} | <span>{{app('\App\Http\Controllers\JeuController')->getScore()}} </span></button>
 
     <a href="{{ action("JeuController@index") }}">
-        <button class="retour connexion" style="width: 91px; margin-left: 93.7%;"><span>Retour</span></button>
+        <button class="retour connexion" style=";width: 91px; margin-left: 93.7%;"><span>Retour</span></button>
     </a>
     <img class="" src="{{asset('img/people.png')}}" alt="">
 
@@ -186,19 +190,19 @@
     $('.retour').hide();
 
     $( ".bt2" ).one( "click", function() {
-
+        $('.connexion').hide();
                 $( ".first").stop().animate({ "left": "-=33%"}, 1000 );
         $( ".third").stop().animate({ "right": "-=33%"}, 1000 );
-        $('.connexion').fadeOut(1000);
+        $('.retour').fadeIn();
+
+        $('.retour').animate({
+            top: "+=350px",
+        },2000);
         $('.connexion2').animate({
             top: "+=350px",
             width: "-=57px",
             left: "-=15px"
-        },2000);
-        $('.retour').animate({
-            top: "+=350px",
-        },2000);
-        $('.retour').fadeIn(1000);
+        },2450);
     });
 
 
