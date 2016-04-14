@@ -183,6 +183,7 @@
 
 
 <script>
+    $('.retour').hide();
 
     $( ".bt2" ).one( "click", function() {
 
