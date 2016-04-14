@@ -47,10 +47,10 @@ class JeuController extends Controller
             $score =  Input::get('score');
             $user = DB::table('classement')->where('pseudo',Auth::user()->pseudo)->first();
             $score_actuel = $user->score;
-            $nouveau_score = $score_actuel + $score;
+            $nouveauscore = $score_actuel + $score;
             DB::table('classement')
                 ->where('pseudo', Auth::user()->pseudo)
-                ->update(['score' => $nouveau_score]);
+                ->update(['score' => $nouveauscore]);
         } else {
             return response('Unauthorized','401');
         }

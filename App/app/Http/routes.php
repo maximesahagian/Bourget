@@ -15,7 +15,7 @@ Route::get('/jeu' , 'JeuController@index');
 
 Route::post('apply/upload', 'Uploaded@upload');
 
-Route::get('jeu/score', 'JeuController@setScore');
+Route::get('score', 'JeuController@setScore');
 
 Route::get('logout', 'JeuController@logout');
 
