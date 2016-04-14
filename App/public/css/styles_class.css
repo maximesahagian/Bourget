@@ -594,6 +594,16 @@ th{
     background-color:#1b87de;
 }
 
+tr{
+    height: 30px;
+}
+
+tr:nth-child(2){
+    border-top: 10px solid;
+    border-bottom: 3px solid;
+    border-color: transparent;
+}
+
 td{
     text-align: center;
 }

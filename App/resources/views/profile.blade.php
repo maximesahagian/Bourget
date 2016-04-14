@@ -38,6 +38,7 @@
 
             <div class="total">Score : {{app('\App\Http\Controllers\ProfileController')->getScore()}}</div>
             <div class="rang">Vous êtes : {{app('\App\Http\Controllers\ProfileController')->getGrade()}}</div>
+            <div class="rang">{{app('\App\Http\Controllers\ProfileController')->getScoreManquant()}}</div>
             <hr/>
             <h3>Sticker de l'avion</h3>
             <div class="about-section">
