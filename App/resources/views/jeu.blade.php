@@ -254,13 +254,41 @@
 
 
 <script type="text/javascript">
+
+
+
     function sendScore(score) {
         $.ajax({
-            url: "score",
+            url: "{{ URL::to('score')}}",
             type: "GET",
-            data: {'score': score,'_token': $('#_token').val()},
+            data: {'score': score},
             success: function (data) {
                 console.log('Score modifié avec succès');
+            }
+        });
+    }
+
+
+
+    function sendTime(time) {
+        $.ajax({
+            url: "{{ URL::to('time')}}",
+            type: "GET",
+            data: {'time': time},
+            success: function (data) {
+                console.log('Time ajouté avec succès');
+            }
+        });
+    }
+
+
+    function sendLife(life) {
+        $.ajax({
+            url: "{{ URL::to('life')}}",
+            type: "GET",
+            data: {'life': life},
+            success: function (data) {
+                console.log('Vies ajoutés avec succès');
             }
         });
     }

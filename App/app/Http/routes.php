@@ -15,8 +15,6 @@ Route::get('/jeu' , 'JeuController@index');
 
 Route::post('apply/upload', 'Uploaded@upload');
 
-Route::get('score', 'JeuController@setScore');
-
 Route::get('logout', 'JeuController@logout');
 
 Route::get('jeu/simulator', array(
@@ -31,6 +29,12 @@ Route::get('/', function () {
 });
 
 Route::auth();
+
+Route::get('/score', 'JeuController@setScore');
+
+Route::get('/life', 'JeuController@setLife');
+
+Route::get('/time', 'JeuController@setTime');
 
 Route::get('/jeu/classement', 'ClassementController@index');
 

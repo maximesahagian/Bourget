@@ -47,13 +47,75 @@ class JeuController extends Controller
             $score =  Input::get('score');
             $user = DB::table('classement')->where('pseudo',Auth::user()->pseudo)->first();
             $score_actuel = $user->score;
+            $nb_parties = $user->nb_parties;
+            $new_nb_parties = $nb_parties + 1;
             $nouveauscore = $score_actuel + $score;
             DB::table('classement')
                 ->where('pseudo', Auth::user()->pseudo)
                 ->update(['score' => $nouveauscore]);
+            DB::table('classement')
+                ->where('pseudo', Auth::user()->pseudo)
+                ->update(['nb_parties' => $new_nb_parties]);
         } else {
             return response('Unauthorized','401');
         }
     }
-    
+
+    public function setTime()
+    {
+        if (Auth::check())
+        {
+            $time =  Input::get('time');
+            $user = DB::table('game')->where('pseudo',Auth::user()->pseudo)->first();
+            $bestTime = $user->bestTime;
+            $timeTotal = $user->timeTotal;
+            $newTimeTotal = $timeTotal + $time;
+            
+            if($time < $bestTime){
+                DB::table('game')
+                    ->where('pseudo', Auth::user()->pseudo)
+                    ->update(['bestTime' => $time]);
+
+                DB::table('game')
+                    ->where('pseudo', Auth::user()->pseudo)
+                    ->update(['timeTotal' => $newTimeTotal]);
+            }
+
+            else{
+                DB::table('game')
+                    ->where('pseudo', Auth::user()->pseudo)
+                    ->update(['timeTotal' => $newTimeTotal]);
+            }
+
+        } else {
+            return response('Unauthorized','401');
+        }
+    }
+
+    public function setLife()
+    {
+        if (Auth::check())
+        {
+            $life =  Input::get('life');
+            $user = DB::table('game')->where('pseudo',Auth::user()->pseudo)->first();
+            $cerceauxTotal = $user->cerceauxTotal;
+            $newCerceauxTotal = $cerceauxTotal + 11;
+
+            $cerceauT = 3-$life;
+
+            $newCerceauxTouch = $user->cerceauxTouch + $cerceauT;
+
+
+            DB::table('game')
+                ->where('pseudo', Auth::user()->pseudo)
+                ->update(['cerceauxTotal' => $newCerceauxTotal]);
+
+            DB::table('game')
+                ->where('pseudo', Auth::user()->pseudo)
+                ->update(['cerceauxTouch' => $newCerceauxTouch]);
+
+        } else {
+            return response('Unauthorized','401');
+        }
+    }
 }
